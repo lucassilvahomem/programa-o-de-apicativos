@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
+import MovieBox from './componentes/listMovie'
 
 function App() {
   const [error, setError] = useState(false)     //Variavel com controle de estado para o erros
@@ -37,6 +38,9 @@ function App() {
   return (                                      //se passar pelos ifs anteriores retorna essa pagina
     <>
       <section id="center">                     {/* mantive o retorno do padrão da pagina gerado pelo vite*/}
+      <div>
+        {MovieBox}
+      </div>
       <div>
         <label>Digite seu nome:</label>
       <input 
