@@ -39,7 +39,7 @@ function App() {
     <>
       <section id="center">                     {/* mantive o retorno do padrão da pagina gerado pelo vite*/}
       <div>
-        {MovieBox}
+        <MovieBox />
       </div>
       <div>
         <label>Digite seu nome:</label>

@@ -4,7 +4,7 @@ function MovieBox() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('Avengers');
-  const API_KEY = 'https://www.omdbapi.com/?i=tt3896198&apikey=93554fd1';
+  const API_KEY = '93554fd1';
 
   useEffect(() => {
     const getData = async () => {
