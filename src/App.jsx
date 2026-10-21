@@ -3,6 +3,9 @@ import './App.css'
 import axios from 'axios'
 import MovieBox from './componentes/listMovie'
 import ThemeButton from './componentes/themeButton'
+import DBZ from './componentes/charDBZ'
+import Pokemon from './componentes/petPokemon'
+import Nomes from './componentes/meuNomes'
 
 function App() {
   const [error, setError] = useState(false)     //Variavel com controle de estado para o erros
@@ -39,8 +42,10 @@ function App() {
   return (                                      //se passar pelos ifs anteriores retorna essa pagina
     <>
       <section id="center">                     {/* mantive o retorno do padrão da pagina gerado pelo vite*/}
-      <ThemeButton dark={dark}
-        onToggle={() => setDark(!dark)} />
+      <main>
+        <h1>Minha aplicação</h1>
+        <ThemeButton />
+      </main>
       <div>
         <MovieBox />
       </div>
@@ -56,7 +61,15 @@ function App() {
       <button onClick={() =>{}}> enviar </button>
       </div>
       </section>
-      <div className="ticks"></div>
+      <div className="ticks">
+        <DBZ />
+      </div>
+      <div>
+        <Pokemon />
+      </div>
+      <div>
+        <Nomes />
+      </div>
     </>
   )
 }
