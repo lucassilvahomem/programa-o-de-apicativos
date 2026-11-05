@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import MovieBox from './componentes/listMovie'
-import ThemeButton from './componentes/themeButton'
-import DBZ from './componentes/charDBZ'
-import Pokemon from './componentes/petPokemon'
-import Nomes from './componentes/meuNomes'
 
 function App() {
   const [error, setError] = useState(false)     //Variavel com controle de estado para o erros
   const [loading, setLoading] = useState(true)  //Variavel com controle de estado para o Carregamento
   const [filme, setFilme] = useState({})
+  const [temaEscuro, setTemaEscuro] = useState(false);
 
   const[text, setText] = useState( localStorage.getItem('easy-input') || '')
   useEffect(() =>  {localStorage.setItem('easy-input', text);},[text])
@@ -44,7 +41,14 @@ function App() {
       <section id="center">                     {/* mantive o retorno do padrão da pagina gerado pelo vite*/}
       <main>
         <h1>Minha aplicação</h1>
-        <ThemeButton />
+        <main className={temaEscuro ? 'tema-escuro' : 'tema-claro'}>
+        <h1>Configurações de aparência</h1>
+        <p>Escolha o tema da sua interface.</p>
+
+        <button onClick={() => setTemaEscuro(!temaEscuro)}>
+          Alternar tema
+        </button>
+        </main>
       </main>
       <div>
         <MovieBox />
@@ -62,14 +66,9 @@ function App() {
       </div>
       </section>
       <div className="ticks">
-        <DBZ />
+        
       </div>
-      <div>
-        <Pokemon />
-      </div>
-      <div>
-        <Nomes />
-      </div>
+      
     </>
   )
 }

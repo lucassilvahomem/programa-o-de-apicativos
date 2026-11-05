@@ -182,3 +182,26 @@
     border-right-color: var(--border);
   }
 }
+
+.tema-claro {
+  background-color: #ffffff;
+  color: #243247;
+  padding: 32px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.tema-escuro {
+  background-color: #172334;
+  color: #f1f5f9;
+  padding: 32px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
