@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import MovieBox from './componentes/listMovie'
+import Pet from './componentes/petPokemon'
+import DBZ from './componentes/characterDBZ'
 
 function App() {
   const [error, setError] = useState(false)     //Variavel com controle de estado para o erros
@@ -66,7 +68,10 @@ function App() {
       </div>
       </section>
       <div className="ticks">
-        
+        <Pet />
+      </div>
+      <div>
+        <DBZ />
       </div>
       
     </>
