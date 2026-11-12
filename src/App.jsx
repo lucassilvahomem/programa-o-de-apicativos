@@ -4,6 +4,7 @@ import axios from 'axios'
 import MovieBox from './componentes/listMovie'
 import Pet from './componentes/petPokemon'
 import DBZ from './componentes/characterDBZ'
+import Sorteio from './componentes/sorteioPokemon'
 
 function App() {
   const [error, setError] = useState(false)     //Variavel com controle de estado para o erros
@@ -66,14 +67,17 @@ function App() {
 
       <button onClick={() =>{}}> enviar </button>
       </div>
-      </section>
       <div className="ticks">
-        <Pet />
+      <Pet />
+      
+      </div>
+      <div>
+        <Sorteio />
       </div>
       <div>
         <DBZ />
       </div>
-      
+      </section>
     </>
   )
 }

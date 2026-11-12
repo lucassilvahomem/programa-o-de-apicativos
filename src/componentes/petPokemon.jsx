@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 
 function Pet(){
     const [pokemon, setPokemon] = useState({})
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
     useEffect(() => {
         const getData = async () => {
             try{
@@ -11,10 +13,20 @@ function Pet(){
             }
             catch(e){
                 console.error("erro ao carregar api", e)
+                setError(true)
+            }finally{
+                setLoading(false)
             }
         }
         getData();
     },[])
+
+    if (loading) {                                // caso loading true retorna essa div para a pagina
+        return (<div>Loading</div>)
+    }
+    if (error) {                                  // caso error true retorna essa div para a pagina
+        return (<div>Ocorreu um erro inesperado</div>)
+    }
 
     return (
         <div>
@@ -25,4 +37,4 @@ function Pet(){
     )
 }
 
-export default petPokemon
+export default Pet

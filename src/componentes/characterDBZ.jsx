@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 
 function DBZ(){
     const [personagem, setPersonagem] = useState({})
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
     useEffect(() => {
         const getData = async () => {
             try{
@@ -11,10 +13,20 @@ function DBZ(){
             }
             catch(e){
                 console.error("erro ao carregar api", e)
+                setError(true)
+            }finally{
+                setLoading(false)
             }
         }
         getData();
     },[])
+
+    if (loading) {                                // caso loading true retorna essa div para a pagina
+        return (<div>Loading</div>)
+    }
+    if (error) {                                  // caso error true retorna essa div para a pagina
+        return (<div>Ocorreu um erro inesperado</div>)
+    }
 
     return (
         <div>
@@ -25,4 +37,4 @@ function DBZ(){
     )
 }
 
-export default characterDBZ
+export default DBZ
