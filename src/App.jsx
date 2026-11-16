@@ -69,15 +69,14 @@ function App() {
       </div>
       <div className="ticks">
       <Pet />
-      
-      </div>
-      <div>
-        <Sorteio />
       </div>
       <div>
         <DBZ />
       </div>
       </section>
+      <div>
+        <Sorteio />
+      </div>
     </>
   )
 }
