@@ -1,0 +1,1 @@
+import DBZ from "./componentes/characterDBZ"

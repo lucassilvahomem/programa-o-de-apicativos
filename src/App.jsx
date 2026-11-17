@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
+//import { Routes, Route, BrowserRouter } from "react-router-dom"
 import './App.css'
 import axios from 'axios'
 import MovieBox from './componentes/listMovie'

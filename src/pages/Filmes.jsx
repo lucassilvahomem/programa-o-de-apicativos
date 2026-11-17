@@ -1,0 +1,1 @@
+import MovieBox from "./componentes/listMovies"
